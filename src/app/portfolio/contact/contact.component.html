@@ -1,0 +1,33 @@
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <section class="contact-form py-5">
+                <div class="container text-center">
+                    <h2 class="section-title"><span class="highlight">My </span> <span class="text-decoration-underline">Contact</span></h2>
+                    <form class="mt-4">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name" [(ngModel)]="contactObj.name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email"  name="email" [(ngModel)]="contactObj.email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Your Phone"  name="number" [(ngModel)]="contactObj.number" required >
+                        </div>
+                        <div class="mb-3 mb-5">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"  name="message"  [(ngModel)]="contactObj.message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light text" (click)="onSubmit()">Send Now</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="col-md-3">
+        {{formValue |json}}
+    </div>
+</div>
+
+
